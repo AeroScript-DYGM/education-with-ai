@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Plataforma especializada de IA para el curso Desarrollo Backend con C# .NET y Bases de Datos Relacionales. Asistentes expertos en C#, ORM, SQL, Arquitectura de Software y Spec-Driven Development." />
+  <meta name="theme-color" content="#07090f" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Backend C# — Asistentes IA Especializados" />
+  <meta property="og:description" content="Curso completo Backend con C# .NET, Entity Framework, SQL, Arquitectura Limpia y Spec-Driven Development" />
+  <meta property="og:type" content="website" />
+
+  <title>Backend C# .NET — Asistentes IA</title>
+
+  <!-- Google Fonts: DM Sans (display/body) + JetBrains Mono (código) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800;1,9..40,400&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/4712/4712109.png">
+  <!-- Hoja de estilos principal -->
+  <link rel="stylesheet" href="./css/style.css" />
+</head>
+
+<body>
+  <!-- ╔══════════════════════════════════════════╗
+       ║     OVERLAY SIDEBAR (mobile)            ║
+       ╚══════════════════════════════════════════╝ -->
+  <div class="sidebar-overlay" id="sidebarOverlay" aria-hidden="true"></div>
+
+  <!-- ╔══════════════════════════════════════════╗
+       ║          SHELL DE LA APLICACIÓN         ║
+       ╚══════════════════════════════════════════╝ -->
+  <div class="app-shell">
+
+    <!-- ══════════════════════════════════════════
+         SIDEBAR — Navegación de materias
+    ══════════════════════════════════════════ -->
+    <aside class="sidebar" id="sidebar" role="navigation" aria-label="Navegación de materias">
+
+      <!-- Logo -->
+      <div class="sidebar-logo">
+        <a class="logo-mark" href="#" aria-label="Aula Virtual de Asistentes IA — inicio">
+          <div class="logo-icon" aria-hidden="true">✦</div>
+          <div class="logo-text">
+            <span class="logo-title">Aula Virtual</span>
+            <span class="logo-subtitle">Asistentes IA</span>
+          </div>
+        </a>
+      </div>
+
+      
+
+    </aside>
+
+    <!-- ══════════════════════════════════════════
+         CONTENIDO PRINCIPAL
+    ══════════════════════════════════════════ -->
+    <div class="main-content" role="main">
+
+      <!-- ── Topbar ───────────────────────────────── -->
+      <header class="topbar" role="banner">
+        <div class="topbar-left">
+          <p class="topbar-breadcrumb">Curso Backend · Asistentes IA Especializados</p>
+          <h1 class="topbar-title">Desarrollo Backend con C# .NET</h1>
+        </div>
+        <div class="topbar-right">
+          <span class="assistant-count">5 Asistentes</span>
+        </div>
+      </header>
+
+      <!-- ── Dashboard ─────────────────────────────── -->
+      <div class="dashboard">
+
+        <!-- Sección: Asistentes -->
+        <section aria-labelledby="sectionTitle">
+          <div class="section-header">
+            <h2 class="section-title" id="sectionTitle">Asistentes disponibles</h2>
+            <span class="section-count" id="sectionCount" aria-live="polite">5 asistentes</span>
+          </div>
+
+          <!-- Grid de tarjetas (generado dinámicamente) -->
+          <div
+            class="cards-grid"
+            id="cardsGrid"
+            role="list"
+            aria-label="Tarjetas de asistentes IA"
+          >
+            <!-- Skeleton loader mientras carga JS -->
+            <div class="history-empty" role="status" aria-label="Cargando asistentes">
+              Cargando asistentes…
+            </div>
+          </div>
+        </section>
+
+        <!-- Sección: Historial de uso - OCULTO: Solo un curso, sin necesidad de historial -->
+        <section class="history-section" style="display: none;" aria-labelledby="historyTitle">
+          <div class="section-header">
+            <h2 class="section-title" id="historyTitle">Sesiones recientes</h2>
+          </div>
+          <div
+            id="historyList"
+            role="log"
+            aria-live="polite"
+            aria-label="Historial de uso de asistentes"
+          >
+            <!-- Generado dinámicamente por app.js -->
+          </div>
+        </section>
+
+      </div><!-- /dashboard -->
+    </div><!-- /main-content -->
+  </div><!-- /app-shell -->
+
+  <!-- ╔══════════════════════════════════════════╗
+       ║          TOAST DE FEEDBACK              ║
+       ╚══════════════════════════════════════════╝ -->
+  <div
+    class="toast"
+    id="toast"
+    role="status"
+    aria-live="assertive"
+    aria-atomic="true"
+  >
+    <span class="toast-icon" aria-hidden="true">✓</span>
+    <div class="toast-content">
+      <span class="toast-message">Mensaje de notificación</span>
+    </div>
+  </div>
+
+  <!-- ── Script principal ────────────────────────────────── -->
+  <script src="./js/app.js" defer></script>
+</body>
+</html>
